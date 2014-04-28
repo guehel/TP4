@@ -1,0 +1,77 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+padding: 10px;
+border: 1px #0568CD solid;
+margin: 10px;
+}
+
+legend {
+font-weight: bold;
+color: #0568CD;
+}
+#page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    
+}
+
+#entete{
+    width: 100%;
+    height: 10%;
+    /*position: fixed;*/
+    top:30%;
+}
+
+#corps{
+    width: 1200px;
+     /*height:800px;*/
+    padding: 10px;
+    margin: auto;
+    background-color: white;
+    border:3px solid black;
+    font-size: 22px;
+}
+
+#nationalite{
+    position:relative; 
+    background-color:white; 
+    border:solid grey 1px;  width:120px
+}
+
+#nationalite select { position:absolute; top:0px; left:0px; font-size:14px; border:none; width:120px; margin:0; }
+#nationalite input { position:absolute; top:0px; left:0px; width:100px; padding:1px; font-size:12px; border:none; }
+#nationalite select:focus, .select-editable input:focus { outline:none; }
+
+.cache{
+    visibility: 
+        collapse;
+}
+.apparent{
+    visibility: 
+        visible;
+}
+table {
+    height: auto;
+}
+.listeEtudiants{
+  width: 100%;
+    /*border: 1px solid black;*/
+    border-collapse:collapse;
+}
+
+.listeEtudiants th{
+    background-color: cornflowerblue;
+}
+/*.listeEtudiants tr {
+  border: 1px solid black;  
+}*/
+
+.listeEtudiants tr:nth-child(even) {background: #CCC}
+.listeEtudiants tr:nth-child(odd) {background: #FFF}
