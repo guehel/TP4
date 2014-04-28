@@ -8,11 +8,7 @@ abstract  class absDAO{
         $this->connection = $connextion;
     }
     
-    protected function execute_request($sql){
-         $returnValue = $this->connection->executer_request($sql, $this->bdName);
-         return $returnValue;
-    }
-    
+       
     public abstract function find();
     public abstract function insert($object);
     public abstract function delete($object);
