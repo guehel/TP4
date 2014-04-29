@@ -28,6 +28,8 @@ class Commande {
     private $souris = null;
     private $cable = null;
     private $adresse = null;
+    private $date = null;
+    private $heure = null;
     private $erreur = array();
     private $valideur;
 
@@ -37,6 +39,14 @@ class Commande {
         $this->cable = 0;
         $this->disque = 0;
         $this->adresse = '';
+    }
+
+    public function getHeure() {
+        return $this->heure;
+    }
+
+    public function getDate() {
+        return $this->date;
     }
 
     public function getDisque() {
@@ -63,6 +73,14 @@ class Commande {
         return $this->valideur;
     }
 
+    public function setHeure($heure) {
+        $this->heure = $heure;
+    }
+
+    public function setDate($date) {
+        $this->date = $date;
+    }
+
     public function setDisque($disque) {
         $this->disque = $disque;
     }
@@ -85,6 +103,30 @@ class Commande {
 
     public function setValideur($valideur) {
         $this->valideur = $valideur;
+    }
+
+    public function getValeur() {
+        $somme = ($this->cable * 2) + ($this->disque * 100) + ($this->souris * 35);
+        return $somme;
+    }
+
+    public function getQuantite() {
+        $somme = ($this->cable) + ($this->disque) + ($this->souris);
+        return $somme;
+    }
+
+    public function toArray() {
+        $somme = array($this->date, $this->heure, $this->adresse, $this->cable, $this->disque, $this->souris);
+        return $somme;
+    }
+
+    public function fromArray($somme) {
+        $this->date = $somme[0];
+        $this->heure = $somme[1];
+        $this->adresse = $somme[2];
+        $this->cable = $somme[3];
+        $this->disque = $somme[4];
+        $this->souris = $somme[5];
     }
 
     public function Valide() {

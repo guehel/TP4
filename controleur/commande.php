@@ -3,14 +3,13 @@
 require_once 'includes.php';
 
 
-$message = array();
+$message = array("connexion"=>"");
 $commande = new Commande();
+$vue = '../vue/vueCommande.php';
 
 
 if (!empty($_GET)) {
-
-    print_r($_GET);
-
+    if( !isset($_GET['confirme'])){
     $disque = htmlspecialchars($_GET['disque']);
     $souris = htmlspecialchars($_GET['souris']);
     $cable = htmlspecialchars($_GET['cable']);
@@ -19,8 +18,11 @@ if (!empty($_GET)) {
     $commande->setCable($cable);
     $commande->setSouris($souris);
     $commande->setDisque($disque);
-
-    if ($commande->valide()) {
+    $vue = '../vue/vueConfirmation.php';
+     }
+    else {
+        $comtexte=$_GET['commande'];
+        $commande->fromArray($comtexte);
         $factory = new Factory('localhost', 'root', '');
         $bdCommandes = $factory->getCommandeDAO();
         
@@ -29,11 +31,9 @@ if (!empty($_GET)) {
         } else {
             $message['connexion'] = "l'enregistrement de votre commande a echoué";
         }
-    } else {
-        $message = $commande->getErreur();
     }
 }
 
 
-require '../vue/vueCommande.php';
+require $vue;
 ?>

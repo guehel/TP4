@@ -9,23 +9,23 @@
     </head>
     <body onload="">
         <div id="page">
-        <div id="entete"></div>
-        <div id="corps">
-              <div id="gauche">
-                  <a href='../controleur/commande.php'><span>Enregitrer commande</span></a>
-                     <a href='../controleur/lister.php'>Liste des commandes</a>
-             </div>
-        <div id="droite">
-            <form action ="<?php echo $action; ?>" method="GET">
-                <fieldset>
-                    <legend><?php echo $legende; ?></legend>
-                    <?php echo $contenu;?>
-                </fieldset>
-            </form>
-        </div>
-         </div>    
-     
-        <p id="message"> <?php echo $message; ?> </p>
+            <div id="entete"><h1>Paul's Informatique</h1></div>
+            <div id="corps">
+                <div id="gauche">
+                    <a href='../controleur/commande.php'><span>Enregitrer commande</span></a>
+                    <a href='../controleur/lister.php'>Liste des commandes</a>
+                </div>
+                <div id="droite">
+                    <form action ="<?php echo $action; ?>" method="GET">
+                        <fieldset>
+                            <legend><?php echo $legende; ?></legend>
+                            <?php echo $contenu; ?>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>    
+
+            <p id="message"> <?php echo $message['connexion']; ?> </p>
         </div>
     </body>
 </html>

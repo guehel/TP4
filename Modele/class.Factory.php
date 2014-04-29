@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ALL);
-require_once 'class.StagiaireDAO.php';
+require_once 'class.CommanderDAO.php';
 
 
 if (0 > version_compare(PHP_VERSION, '5')) {
