@@ -1,13 +1,12 @@
 <?php
-$titre = 'Modification stagiaires';
+$titre = 'Commandes client';
 $legende = 'Commandes des clients';
 $action = '../controleur/lister.php';
+$message = '';
 ob_start();
 ?>
 <div>
-
-
-    <table >
+   <table >
         <tr>
             <th>Date</th>
             <th>Heure</th>
@@ -30,7 +29,7 @@ ob_start();
 
         <?php endforeach; ?>
     </table>
-</fieldset>
+
 <?php
 $contenu = ob_get_clean();
 include 'layout.php';

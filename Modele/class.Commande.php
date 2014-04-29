@@ -66,6 +66,7 @@ class Commande {
     }
 
     public function getErreur() {
+       
         return $this->erreur;
     }
 
@@ -116,17 +117,18 @@ class Commande {
     }
 
     public function toArray() {
-        $somme = array($this->date, $this->heure, $this->adresse, $this->cable, $this->disque, $this->souris);
+        $somme = array('date'=>$this->date, 'heure'=>$this->heure, 'adresse'=>$this->adresse, 'cable'=>$this->cable, 'disque'=>$this->disque, 'souris'=>$this->souris);
         return $somme;
     }
 
     public function fromArray($somme) {
-        $this->date = $somme[0];
-        $this->heure = $somme[1];
-        $this->adresse = $somme[2];
-        $this->cable = $somme[3];
-        $this->disque = $somme[4];
-        $this->souris = $somme[5];
+        
+        $this->date = $somme['date'];
+        $this->heure = $somme['heure'];
+        $this->adresse = $somme['adresse'];
+        $this->cable = $somme['cable'];
+        $this->disque = $somme['disque'];
+        $this->souris = $somme['souris'];
     }
 
     public function Valide() {

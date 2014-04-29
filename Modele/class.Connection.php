@@ -47,7 +47,7 @@ class Connection {
     }
      public  function get_file() {
       
-        return file($this->fichier);
+        return $this->fichier;
     }
 
     public function close_connextion($handle) {

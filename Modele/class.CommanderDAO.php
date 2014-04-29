@@ -36,14 +36,15 @@ class CommandeDAO extends absDAO {
 
     public function insert($commande) {
         $s = serialize($commande);
-        if ($handler = $this->connection->open_file("ab")) {
+        $handle = $this->connection->open_file("ab");
+        if($handle){
             flock($handle, LOCK_EX);
             fwrite($handle, $s, strlen($s));
             $this->connection->close_connextion($handle);
             return true;
         } else {
             return false;
-        };
+        }
     }
 
     public function update($commande) {

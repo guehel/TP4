@@ -5,8 +5,8 @@ $action = '../controleur/Commande.php';
 ?>
 <?php ob_start(); ?>
 
-<input type='hidden' name='confirme' value ='true'/>
-<input type='hidden' name='commande' value ='<?=$commande->toArray() ?>'/>
+<input type='hidden' id='confirme' name='confirme' value ='1'/>
+<input type='hidden' id='commande' name='commande' value ='<?= json_encode($commande->toArray()) ?>'/>
 <table>
     <tr>
 
@@ -50,7 +50,7 @@ $action = '../controleur/Commande.php';
     </tr>
     <tr>
 
-        <td><input type="reset" value="Annuler"/></td>
+        <td><input type="button" id='annuler' value="Annuler"/></td>
         <td><input type="submit" value="Confirmer"/></td>
     </tr>
 </table>

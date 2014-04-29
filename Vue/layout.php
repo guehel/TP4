@@ -17,7 +17,7 @@
                     <a href='../controleur/lister.php'>Liste des commandes</a>
                 </div>
                 <div id="droite">
-                    <form action ="<?php echo $action; ?>" method="GET">
+                    <form id = "formulaire" name= "formulaire" >
                         <fieldset>
                             <legend><?php echo $legende; ?></legend>
                             <?php echo $contenu; ?>
@@ -26,7 +26,7 @@
                 </div>
             </div>    
 
-            <p id="message"> <?php echo $message['connexion']; ?> </p>
+            <p id="message"> <?=isset($message['connexion'])?$message['connexion']:"" ?> </p>
         </div>
     </body>
 </html>

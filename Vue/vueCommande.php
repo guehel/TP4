@@ -1,10 +1,11 @@
 <?php
 $titre = 'commande';
 $legende = 'Formulaire de commande';
-$action = '../controleur/Commande.php';
+//$action = '../controleur/Commande.php';
 ?>
 <?php ob_start(); ?>
 <div>
+    <input type='hidden' id='confirme' name='confirme' value ='0'/>
     <fieldset>
         <table>
             <tr>
@@ -12,7 +13,7 @@ $action = '../controleur/Commande.php';
                     <label for="disque">Disque dure</label> 
                 </td>
                 <td>  
-                    <input type="text" id="disque"  name="disque" value='<?=$commande->getDisque()?>'/>
+                    <input type="text" class ='nombre' id="disque"  name="disque" value='<?=isset($commande)?$commande->getDisque():null?>'/>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -21,7 +22,7 @@ $action = '../controleur/Commande.php';
                     <label for="souris">Souris</label>
                 </td>
                 <td>
-                    <input type="text" id="souris" name="souris" value='<?=$commande->getSouris()?>'/>
+                    <input type="text"  class ='nombre' id="souris" name="souris" value='<?=isset($commande)?$commande->getSouris():null?>'/>
                 </td><td>&nbsp;</td>
             </tr>
             <tr>
@@ -29,7 +30,7 @@ $action = '../controleur/Commande.php';
                     <label for="cable">Cable</label>
                 </td>
                 <td>
-                    <input type="text" id="cable" name="cable" value='<?=$commande->getCable()?>'/>
+                    <input type="text" class ='nombre' id="cable" name="cable" value='<?=isset($commande)?$commande->getCable():null?>'/>
                 </td><td>&nbsp;</td>
             </tr>
             <tr>
@@ -37,7 +38,7 @@ $action = '../controleur/Commande.php';
                     <label for="adresse">Adresse de livraison</label>
                 </td>
                 <td>
-                    <input type="text" id="adresse" name="adresse" value='<?=$commande->getAdresse()?>'/>
+                    <input type="text"  class ='texte' id="adresse" name="adresse" value='<?=isset($commande)?$commande->getAdresse():null?>'/>
                 </td><td>&nbsp;</td>
             </tr>
 
