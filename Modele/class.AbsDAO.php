@@ -1,5 +1,5 @@
 <?php
-
+require_once 'class.Connection.php';
 abstract  class absDAO{
     protected $connection = null;
     protected  $bdName = "tp3_poo3";

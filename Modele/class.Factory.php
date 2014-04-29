@@ -26,9 +26,9 @@ class Factory
     }
 
 
-    public function getFormateurDAO()
+    public function getCommandeDAO()
     {
-        $returnValue = new FormateurDAO($this->connection);
+        $returnValue = new CommandeDAO($this->connection);
         return $returnValue;
     }
 

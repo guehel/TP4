@@ -7,13 +7,13 @@
         <link rel="stylesheet" type="text/css" href="http://localhost/TP3_POO3/vue/style/style.css">
         <title><?php echo $titre ?></title>
     </head>
-    <body onload="restrindreFormateur()">
+    <body onload="">
         <div id="page">
         <div id="entete"></div>
         <div id="corps">
               <div id="gauche">
-                  <a href='../controleur/formation.php'><span>Inscrire un  stagiaire</span></a>
-                     <a href='../controleur/modification.php'>Modification d'un  stagiaire</a>
+                  <a href='../controleur/commande.php'><span>Enregitrer commande</span></a>
+                     <a href='../controleur/lister.php'>Liste des commandes</a>
              </div>
         <div id="droite">
             <form action ="<?php echo $action; ?>" method="GET">

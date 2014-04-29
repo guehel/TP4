@@ -41,20 +41,20 @@ class Connection {
   
 
 
-    private function open_db() {
+    public  function open_file($mode) {
+      
+        return fopen($this->fichier, $mode);
+    }
+     public  function get_file() {
+      
+        return file($this->fichier);
     }
 
-    private function close_connextion() {
-       
+    public function close_connextion($handle) {
+        fclose($handle);
     }
 
-    public function executer_request($sql) {
-
-
-        $this->open_db();
-       
-        $this->close_connextion();
-    }
+    
 
     public static function getInstance($fichier) {
         if (Connection::$connection == null) {
