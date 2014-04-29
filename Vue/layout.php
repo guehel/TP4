@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type ="text/javascript" src="../vue/script/script.js"></script>
         <link rel="stylesheet" type="text/css" href="http://localhost/TP3_POO3/vue/style/style.css">
         <title><?php echo $titre ?></title>
