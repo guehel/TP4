@@ -23,7 +23,7 @@ if (!empty($_GET)) {
     
     if ($commande->Valide()) {
        
-        $factory = new Factory('localhost', 'root', '');
+        $factory = new Factory('commandes.txt');
         $bdCommandes = $factory->getCommandeDAO();
        
         if ($bdCommandes->insert($commande)) {

@@ -26,8 +26,12 @@ class CommandeDAO extends absDAO {
 
     public function find() {
       
-        $fichierCommande= $this->connection->get_file();
-        return explode("\n", $fichierCommande);
+        $fichierCommande = $this->connection->get_file();  
+//        echo      print_r($fichierCommande);
+        print($fichierCommande);
+        
+        return $fichierCommande;
+   
     }
 
     public function delete($commande) {
@@ -35,7 +39,7 @@ class CommandeDAO extends absDAO {
     }
 
     public function insert($commande) {
-        $s = serialize($commande);
+        $s = $commande->toString();
         $handle = $this->connection->open_file("ab");
         if($handle){
             flock($handle, LOCK_EX);

@@ -1,5 +1,5 @@
 <?php
-    
+    date_default_timezone_set('Canada/Eastern');
     $disque = htmlspecialchars($_GET['disque']);
     $souris = htmlspecialchars($_GET['souris']);
     $cable = htmlspecialchars($_GET['cable']);

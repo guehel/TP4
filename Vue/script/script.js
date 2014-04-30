@@ -1,17 +1,19 @@
 $(document).ready(function() {
     $('#formulaire').submit(function() {
-        if($('#confirme').val()==='1'){
+        if ($('#confirme').val() === '1') {
             enregistrer();
-           
-    }else{
-       
-         confirmer();
-    }
-   
+
+        } else {
+
+            confirmer();
+        }
+
         return false;
     });
-    $('#annuler').click(function(){ window.close();});
-    
+    $('#annuler').click(function() {
+        window.close();
+    });
+
     $('input:text.nombre').blur(function() {
         validerNombre(this);
 
@@ -20,29 +22,32 @@ $(document).ready(function() {
 });
 
 function confirmer() {
-  
-    var url1 = 'lister.php?';
-  
 
-  window.open(url1+$('#formulaire').serialize(),"","width=1200,height=500,menubar=no,location=no");
+    var url1 = 'lister.php?';
+
+    window.open(url1 + $('#formulaire').serialize(), "", "width=1200,height=500,menubar=no,location=no");
 }
 
 function enregistrer() {
 //    alert($('#commande').val());
-   
+
     var url2 = 'commande.php';
-    
-    $.get(  url2
-            ,$('#formulaire').serialize()
-            ,function(data){ alert(data); window.close();}
-            );
-    
+
+    $.get(url2
+            , $('#formulaire').serialize()
+            , function(data) {
+                alert(data);
+                window.close();
+            }
+    );
+
 
 }
 
 function enregistrer1() {
-  
-    var url1 = 'commande.php?';;
-  
-  window.open(url1+$('#formulaire').serialize());
+
+    var url1 = 'commande.php?';
+    ;
+
+    window.open(url1 + $('#formulaire').serialize());
 }

@@ -14,7 +14,7 @@
             <div id="corps">
                 <div id="gauche">
                     <a href='../controleur/commande.php'><span>Enregitrer commande</span></a>
-                    <a href='../controleur/lister.php'>Liste des commandes</a>
+                    <a href='../controleur/Recapituler.php'>Liste des commandes</a>
                 </div>
                 <div id="droite">
                     <form id = "formulaire" name= "formulaire" >
