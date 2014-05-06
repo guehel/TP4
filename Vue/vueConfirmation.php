@@ -24,28 +24,28 @@ $action = '../controleur/Commande.php';
         <td><?= $commande->getQuantite() ?>  </td>
     </tr>
     <tr>
-
-        <td>Disques dure:</td>
         <td><?= $commande->getDisque() ?> </td>
+        <td>Disques dures</td>
+      
     </tr>
     <tr>
-
-        <td>Souris:</td>
         <td><?= $commande->getSouris() ?> </td>
+        <td>Souris</td>
+    
+    </tr>
+    <tr>
+         <td><?= $commande->getCable() ?> </td>
+        <td>Cables</td>
+       
     </tr>
     <tr>
 
-        <td>Cable:</td>
-        <td><?= $commande->getCable() ?> </td>
+        <td>Total de la commande </td>
+        <td><?= $commande->getValeur() ?> $CAD </td>
     </tr>
     <tr>
 
-        <td>Total:</td>
-        <td><?= $commande->getValeur() ?> </td>
-    </tr>
-    <tr>
-
-        <td>Adresse:</td>
+        <td>Adresse de destination est </td>
         <td><?= $commande->getAdresse() ?> </td>
     </tr>
     <tr>
